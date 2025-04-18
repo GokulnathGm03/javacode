@@ -1,0 +1,75 @@
+import {useState} from 'react';
+function App(){
+  const[click,setClick]=useState('none')
+  const[click2,setClick2]=useState('none')
+  const[click3,setClick3]=useState('none')
+  const[color,setColor]=useState('grey')
+  const[color1,setColor1]=useState('grey')
+  const[color2,setColor2]=useState('grey')
+  const[color3,setColor3]=useState('grey')
+  const[arr1,setArr1]=useState('grey')
+  const[arr2,setArr2]=useState('grey')
+  const[arr3,setArr3]=useState('grey')
+  const hello=()=>{
+  let b=color=='grey' ? 'red': 'grey'
+  setColor(b)
+  }
+  const hell=()=>{
+    let b=color1=='grey' ? 'red': 'grey'
+    setColor1(b)
+    }
+  const hel=()=>{
+    let b=color2=='grey' ? 'red': 'grey'
+    setColor2(b)
+  }
+  const he=()=>{
+    let b=color3=='grey' ? 'red': 'grey'
+    setColor3(b)
+  }
+  const c=()=>{ 
+  let a=click=='none' ? 'block': 'none'
+  let a1=arr1== 'grey' ? 'yellow' : 'grey'
+  setClick(a)
+  setArr1(a1)
+  }
+  const d=()=>{ 
+    let a=click2=='none' ? 'block': 'none'
+    let a1=arr2== 'grey' ? 'yellow' : 'grey'
+    setClick2(a)
+    setArr2(a1)
+  }
+  const e=()=>{ 
+    let a=click3=='none' ? 'block': 'none'
+    let a1=arr3== 'grey' ? 'yellow' : 'grey'
+    setClick3(a)
+    setArr3(a1)
+  }
+  return(
+    <div style={{backgroundColor:"black",color:"white"}}>
+      <div style={{backgroundColor:"yellow",color:"black",display:"flex",justifyContent:"space-between",paddingLeft:"30px",paddingRight:"20px"}}>
+        <h1>LEO CAR WORKSHOP</h1>
+        <list style={{display:"flex",gap:"45px",paddingTop:"10px",fontSize:"larger"}}>
+          <ul onClick={hello} style={{color:color}} >Home</ul>
+          <ul onClick={hell} style={{color:color1}}> Help</ul>
+          <ul onClick={hel} style={{color:color2}}>About</ul>
+          <ul onClick={he} style={{color:color3}}>Contact us</ul>
+        </list>
+      </div>
+      <div style={{display:"flex",gap:"15%"}}>
+        <div style={{paddingLeft:"50px",paddingTop:"50px"}}>
+          <h2>Welcome You Riders!</h2>
+          <p>From routine maintenance to advanced diagnostics, we offer reliable, affordable,and expert automotive services. Drive in with confidence - we'll keep your car running like new.Book Your Appointment Today!</p>
+          <button onClick={c} style={{width:"90%",height:"25px",backgroundColor:arr1}}>Car Water Wash <span style={{fontSize:"12px"}}>▼</span></button>
+          <p style={{display:click,width:"89%",height:"90px",backgroundColor:"white",paddingLeft:"2px",marginTop:"0px",color:"black"}}>We offer a range of high-quality car wash packages tailored to your needs. Whether you're looking for a quick clean or full detailing, we've got you covered. If you need detailly contact our workshop.</p>
+          <button onClick={d} style={{width:"90%",height:"25px",backgroundColor:arr2,marginTop:"10px"}}>Full service <span style={{fontSize:"12px"}}>▼</span></button>
+          <p style={{display:click2,width:"89%",height:"90px",backgroundColor:"white",paddingLeft:"2px",marginTop:"0px",color:"black"}}>We offer a range of high-quality car wash packages tailored to your needs. Whether you're looking for a quick clean or full detailing, we've got you covered. If you need detailly contact our workshop.</p>
+          <button onClick={e} style={{width:"90%",height:"25px",backgroundColor:arr3,marginTop:"10px"}}>Stickering <span style={{fontSize:"12px"}}>▼</span></button>
+          <p style={{display:click3,width:"89%",height:"90px",backgroundColor:"white",paddingLeft:"2px",marginTop:"0px",color:"black"}}>We offer a range of high-quality car wash packages tailored to your needs. Whether you're looking for a quick clean or full detailing, we've got you covered. If you need detailly contact our workshop.</p>
+        </div>
+        <img style={{width:"50%"}} src='https://wallpaperaccess.com/full/9496497.jpg'></img>
+      </div>
+    </div>
+    
+  )
+}
+export default App;
